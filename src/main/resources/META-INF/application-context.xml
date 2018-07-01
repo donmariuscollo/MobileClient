@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jee="http://www.springframework.org/schema/jee" xmlns:tx="http://www.springframework.org/schema/tx"
+
+	xsi:schemaLocation="
+    http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+    http://www.springframework.org/schema/context 
+    http://www.springframework.org/schema/context/spring-context-3.1.xsd
+	http://www.springframework.org/schema/tx
+	http://www.springframework.org/schema/tx/spring-tx-3.1.xsd">
+
+	
+
+	<bean id="productCommand" class="com.inventory.MobileClient.command.ProductCommand"/>
+	<bean id="purchaseCommand" class="com.inventory.MobileClient.command.PurchaseCommand"/>
+	<bean id="reportCommand" class="com.inventory.MobileClient.command.ReportCommand"/>
+	<bean id="saleCommand" class="com.inventory.MobileClient.command.SaleCommand"/>
+
+	<bean
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="systemPropertiesModeName">
+			<value>SYSTEM_PROPERTIES_MODE_FALLBACK</value>
+		</property>
+	</bean>
+
+	<tx:annotation-driven />
+	<context:annotation-config />
+
+
+	<bean
+		class="org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor" />
+
+</beans>

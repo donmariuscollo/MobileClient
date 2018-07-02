@@ -30,7 +30,7 @@
 - H2 In-memory Database
 
 ## Architecture
-
+![alt text](https://github.com/donmariuscollo/MobileClient/blob/master/images/microservice.jpg)
 ## Server Ports
 | Application      | Port |
 |------------------|------|

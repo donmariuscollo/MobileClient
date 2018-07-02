@@ -12,6 +12,7 @@
 6. eureka-server
 
 ## Architecture
+![alt text](https://github.com/donmariuscollo/MobileClient/blob/master/images/microservice.jpg)
 
 ## Prerequisites
 - JDK 1.8
@@ -29,8 +30,6 @@
 - Eureka Server
 - H2 In-memory Database
 
-## Architecture
-![alt text](https://github.com/donmariuscollo/MobileClient/blob/master/images/microservice.jpg)
 ## Server Ports
 | Application      | Port |
 |------------------|------|
